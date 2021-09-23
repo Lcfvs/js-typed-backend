@@ -1,5 +1,5 @@
 import * as etched from '@etchedjs/etched'
-import { model } from '@etchedjs/etched'
+import { etch, model } from '@etchedjs/etched'
 import * as engine from '@lcf.vs/dom-engine/lib/backend.js'
 import { fulfilled, object, transformer } from '@src/lib/type/type.js'
 import template from './template.js'
@@ -27,4 +27,10 @@ const load = types.load.of(
   }
 )
 
-export { list, load, serialize, template, types }
+const view = types.view.of(
+  async (...models) => ({
+    template: etched.model(...models)
+  })
+)
+
+export { list, load, serialize, template, types, view }

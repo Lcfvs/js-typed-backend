@@ -1,7 +1,7 @@
 import * as renderer from '@src/lib/renderer/renderer.js'
 import * as string from '@src/lib/type/string.js'
 import type, * as types from '@src/lib/type/type.js'
-import config from '../../lib/config.js'
+import config from '@src/lib/config.js'
 import * as view from '../view/view.js'
 
 export const { fill, template } = await renderer.load(

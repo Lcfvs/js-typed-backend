@@ -32,3 +32,12 @@ export const load = types.fn(
 )
 
 export const template = types.etched(model)
+
+export const view = types.fn(
+  types.asyncFunction,
+  types.expected(types.object, e => e()),
+  [
+    types.arg(types.rest, types.object, e => e())
+  ],
+  e => e()
+)
