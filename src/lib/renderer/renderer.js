@@ -1,13 +1,14 @@
-import { model } from '@etchedjs/etched'
 import * as etched from '@etchedjs/etched'
-import { fulfilled, object, transformer } from '@src/lib/type/type.js'
+import { model } from '@etchedjs/etched'
 import * as engine from '@lcf.vs/dom-engine/lib/backend.js'
+import { fulfilled, object, transformer } from '@src/lib/type/type.js'
+import template from './template.js'
 import * as types from './types.js'
 
 const { serialize } = engine
 
 const list = types.list.of(
-  (...iterables) => model(types.template, ...iterables)
+  (...iterables) => model(template, ...iterables)
 )
 
 const load = types.load.of(
@@ -26,4 +27,4 @@ const load = types.load.of(
   }
 )
 
-export { list, load, serialize, types }
+export { list, load, serialize, template, types }

@@ -1,6 +1,6 @@
+import { list, serialize } from '@src/lib/renderer/renderer.js'
 import * as fragment from '@src/templates/fragment/fragment.js'
 import * as main from '@src/templates/main/main.js'
-import { list, serialize } from '@src/lib/renderer/renderer.js'
 
 console.log(await serialize(fragment.fill({
   view: main.fill({

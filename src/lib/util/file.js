@@ -1,6 +1,6 @@
 import config from '@src/lib/config.js'
-import resolve from './resolve.js'
 import { wait } from './promised.js'
+import resolve from './resolve.js'
 
 const { fetch } = globalThis
 const { retry = 1000, ...options } = config.fetch

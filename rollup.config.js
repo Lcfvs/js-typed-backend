@@ -1,7 +1,7 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
+import { argv } from 'process'
 import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
-import { argv } from 'process'
 import { pathToFileURL } from 'url'
 
 const url = pathToFileURL('src')
