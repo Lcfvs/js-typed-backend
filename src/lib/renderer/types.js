@@ -1,12 +1,13 @@
 import * as etched from '@etchedjs/etched'
 import * as types from '@etchedjs/type'
 import * as string from '@src/lib/type/string.js'
+import { meta } from '@src/lib/type/module.js'
 import model from './template.js'
 
 export const classList = etched.model(
   string.match,
   {
-    pattern: /^(?: *[-_a-z][\w-]*)*$/
+    pattern: /^(?:(?:^| +)[-_a-z][\w-]*)*$/i
   }
 )
 
@@ -23,7 +24,7 @@ export const load = types.fn(
   types.asyncFunction,
   types.expected(types.object, e => e()),
   [
-    types.arg(types.param, types.object, e => e()),
+    types.arg(types.param, meta, e => e()),
     types.arg(types.param, types.object, e => e()),
     types.arg(types.param, types.syncFunction, e => e()),
     types.arg(types.rest, types.object, e => e())

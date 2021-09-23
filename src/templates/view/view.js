@@ -7,5 +7,3 @@ export const { template } = await renderer.view(
   type('description', string.default, e => e()),
   type('title', string.default, e => e())
 )
-
-console.log(template)

@@ -1,6 +1,7 @@
 import config from '@src/lib/config.js'
-import { wait } from './promised.js'
-import resolve from './resolve.js'
+import wait from '../wait/wait.js'
+import resolve from '../resolve/resolve.js'
+import * as types from './types.js'
 
 const { fetch } = globalThis
 const { retry = 1000, ...options } = config.fetch
@@ -20,9 +21,11 @@ const file = fetch
   }
   : async url => {
     const { readFile } = await import('fs/promises')
-    const path = resolve(import.meta, '../../src', url.slice(1))
+    const { cwd } = await import('process')
+    const { resolve } = await import('path')
+    const path = resolve(cwd(), url.slice(1))
 
     return `${await readFile(path)}`
   }
 
-export default file
+export default types.default.of(file)

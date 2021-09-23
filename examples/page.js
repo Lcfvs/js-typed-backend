@@ -1,7 +1,14 @@
 import { list, serialize } from '@src/lib/renderer/renderer.js'
-import file from '@src/lib/util/file.js'
+import file from '@src/lib/util/file/file.js'
 import * as layout from '@src/templates/layout/layout.js'
 import * as main from '@src/templates/main/main.js'
+
+try {
+  await file('/assets/production.importmap')
+} catch ({ errors }) {
+  console.log(Object.fromEntries(errors))
+  process.exit()
+}
 
 console.log(await serialize(layout.fill({
   importmap: await file('/assets/production.importmap'),
