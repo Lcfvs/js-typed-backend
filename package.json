@@ -1,0 +1,19 @@
+{
+  "name": "js-typed-backend",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "description": "[ALPHA] A JavaScript-typed backend",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@etchedjs/etched": "^9.1.3",
+    "@etchedjs/type": "^4.3.0",
+    "@lcf.vs/dom-engine": "^5.4.1",
+    "@src/lib": "./src/lib",
+    "@src/templates": "./src/templates"
+  }
+}
