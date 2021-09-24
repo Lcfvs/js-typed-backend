@@ -18,7 +18,11 @@ export const match = model(
 
 export const query = model(types.string, {
   set value (value) {
-    new URL(value, 'http://localhost')
+    try {
+      new URL(value, 'http://localhost')
+    } catch {
+      throw new TypeError('Must be a valid url query')
+    }
   }
 })
 

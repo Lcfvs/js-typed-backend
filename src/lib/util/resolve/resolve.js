@@ -5,5 +5,5 @@ const resolve = (base, url) =>
 
 export default types.default.of(
   ({ url }, ...urls) =>
-    urls.reduce(resolve, url)
+    urls.reduce(resolve, url).toString()
 )
