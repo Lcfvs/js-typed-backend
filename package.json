@@ -1,6 +1,6 @@
 {
   "name": "js-typed-backend",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "private": true,
   "description": "[ALPHA] A JavaScript-typed backend",
