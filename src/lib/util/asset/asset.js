@@ -1,6 +1,6 @@
 import config from '@src/lib/config.js'
-import wait from '../wait/wait.js'
 import resolve from '../resolve/resolve.js'
+import wait from '../wait/wait.js'
 import * as types from './types.js'
 
 const { assets, fetch } = config

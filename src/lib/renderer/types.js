@@ -1,7 +1,7 @@
 import * as etched from '@etchedjs/etched'
 import * as types from '@etchedjs/type'
-import * as string from '@src/lib/type/string.js'
 import { meta } from '@src/lib/type/module.js'
+import * as string from '@src/lib/type/string.js'
 import model from './template.js'
 
 export const classList = etched.model(

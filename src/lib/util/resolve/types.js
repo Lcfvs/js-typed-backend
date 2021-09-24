@@ -1,6 +1,6 @@
 import * as types from '@etchedjs/type'
-import * as string from '@src/lib/type/string.js'
 import { meta } from '@src/lib/type/module.js'
+import * as string from '@src/lib/type/string.js'
 
 export default types.fn(
   types.syncFunction,
